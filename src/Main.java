@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        Set<Student> infoStudent = new HashSet<Student>();
+        Set<Student> infoStudent = new HashSet<>();
 
         while (true) {
 
@@ -24,6 +24,12 @@ public class Main {
             }
             String numberGroup = separator[1];
             String studentId = separator[2];
+
+            for (Student infoTwo : infoStudent) {
+                if (studentId.equals(infoTwo.studentId)) {
+                    System.out.println("Такой ID же существует в базе, попробуйте другой");
+                }
+            }
 
             infoStudent.add(new Student(nameFamilyPatronymic, numberGroup, studentId));
         }
