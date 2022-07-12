@@ -21,9 +21,6 @@ public class Student {
         if (this == obj) return true;
         if (obj == null || !obj.getClass().equals(Student.class)) return false;
         Student st = (Student) obj;
-        if (studentId.equals(st.studentId)) {
-            System.out.println("Такой идентификатор уже существует, попробуйте другой");
-        }
         return studentId.equals(st.studentId);
     }
 
